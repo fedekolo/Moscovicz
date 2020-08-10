@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>| Moscovicz |</title>
+    <link href="styles/index.css" rel="stylesheet">
+    <link href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" rel="stylesheet">
+    <link href="styles/popup.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script> 
+        var altura=600;
+        var anchura=800;
+        
+        var y=parseInt((window.screen.height/2)-(altura/2));
+        var x=parseInt((window.screen.width/2)-(anchura/2));
+
+        function ventanaSecundaria (URL){ 
+           window.open(URL,"ventana1",'width='+anchura+',height='+altura+',top='+y+',left='+x+',toolbar=no,location=no,status=no,menubar=no,scrollbars=no,directories=no,resizable=no') 
+        } 
+    </script>
+</head>
+<body>
+    <header id="up">
+        <img class="logo" src="images/logo.png" alt="Logo Firma"/>
+    </header>
+    <nav>
+        <ul class="menu">
+            <li class="item-menu"><a href="#obras">obras</a></li>
+            <li class="item-menu"><a href="#galeria">galeria</a></li>
+            <li class="item-menu"><a href="#contacto">contacto</a></li>
+            <li class="item-menu"><a href="sobremi.html">sobre mi</a></li>
+        </ul>
+        <div class="menu-mobile-background">
+            <label for="menu" class="menu-mobile-label"><img class="menu-icono" src="images/open-menu.svg"/></label>
+            <input id="menu" type="checkbox" class="menu-mobile-input">
+            <ul class="menu-mobile">
+                <li class="item-menu"><a href="#obras">obras</a></li>
+                <li class="item-menu"><a href="#galeria">galeria</a></li>
+                <li class="item-menu"><a href="#contacto">contacto</a></li>
+                <li class="item-menu"><a href="sobremi.html">sobre mi</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="slider">
+        <div class="container-all">
+            <input type="radio" id="1" name="image-slide" hidden/>
+            <input type="radio" id="2" name="image-slide" hidden/>
+            <input type="radio" id="3" name="image-slide" hidden/>
+            
+            <div class="slide">
+                <div class="item-slide">
+                    <img src="images/slider1.jpg">
+                </div>
+                <div class="item-slide">
+                    <img src="images/slider2.jpg">
+                </div>
+                <div class="item-slide">
+                    <img src="images/slider3.jpg">
+                </div>
+            </div>
+            <div class="pagination">
+                <label class="pagination-item" for="1">
+                    <img src="images/slider1.jpg">
+                </label>
+                <label class="pagination-item" for="2">
+                    <img src="images/slider2.jpg">
+                </label>
+                <label class="pagination-item" for="3">
+                    <img src="images/slider3.jpg">
+                </label>
+            </div>
+        </div>
+    </section>
+    <h2 class="texto-obras" id="obras">OBRAS</h2>
+    <section class="background-obras">
+        <div class="obras">
+            <a class="obras-popup" href="javascript:ventanaSecundaria('popups-obras/1955_130x100.html')">
+                <div class="cuadro-contenedor"> 
+                    <img class="cuadro-imagen" src="images/cuadros/1955_130x100.jpeg" alt="1955"/>
+                    <h4 class="cuadro-texto">1955</h4>            
+                </div>
+            </a>
+            <a class="obras-popup" href="javascript:ventanaSecundaria('popups-obras/desocupados_130x100.html')">
+                <div class="cuadro-contenedor">
+                    <img class="cuadro-imagen" src="images/cuadros/desocupados_130x100.jpeg" alt="Desocupados"/>
+                    <h4 class="cuadro-texto">Desocupados</h4>
+                </div>
+            </a>
+            <a class="obras-popup" href="javascript:ventanaSecundaria('popups-obras/hotel_50x70.html')">
+                <div class="cuadro-contenedor">
+                    <img class="cuadro-imagen" src="images/cuadros/hotel_50x70.jpeg" alt="Hotel"/>
+                    <h4 class="cuadro-texto">Hotel</h4>
+                </div>
+            </a>
+            <a class="obras-popup" href="javascript:ventanaSecundaria('popups-obras/la-ultima-partida_130x100.html')">
+                <div class="cuadro-contenedor">
+                    <img class="cuadro-imagen" src="images/cuadros/la-ultima-partida_130x100.jpg" alt="La última partida"/>
+                    <h4 class="cuadro-texto">La última partida</h4>
+                </div>
+            </a>
+            <a class="obras-popup" href="javascript:ventanaSecundaria('popups-obras/manifestacion_80x100.html')">
+                <div class="cuadro-contenedor">
+                    <img class="cuadro-imagen" src="images/cuadros/manifestacion_80x100.jpeg" alt="Manifestación"/>
+                    <h4 class="cuadro-texto">Manifestación</h4>
+                </div>
+            </a>
+            <a class="obras-popup" href="javascript:ventanaSecundaria('popups-obras/los-banistes_80x100.html')">
+                <div class="cuadro-contenedor">
+                    <img class="cuadro-imagen" src="images/cuadros/los-banistes_80x100.jpg" alt="Los bañistes"/>
+                    <h4 class="cuadro-texto">Los Bañistes</h4>
+                </div>
+            </a>
+            <a class="obras-popup" href="javascript:ventanaSecundaria('popups-obras/fermin_80x100.html')">
+                <div class="cuadro-contenedor">
+                    <img class="cuadro-imagen" src="images/cuadros/fermin_80x100.jpg" alt="Fermin"/>
+                    <h4 class="cuadro-texto">Fermin</h4>
+                </div>
+            </a>
+            <a class="obras-popup" href="javascript:ventanaSecundaria('popups-obras/ana-no-duerme_50x70.html')">
+                <div class="cuadro-contenedor">
+                    <img class="cuadro-imagen" src="images/cuadros/ana-no-duerme_50x70.jpg" alt="Ana no duerme"/>
+                    <h4 class="cuadro-texto">Ana no duerme</h4>
+                </div>
+            </a>
+            <a class="obras-popup" href="javascript:ventanaSecundaria('popups-obras/el-chapuzon_50x70.html')">
+                <div class="cuadro-contenedor">
+                    <img class="cuadro-imagen" src="images/cuadros/el-chapuzon_50x70.jpg" alt="El chapuzón"/>
+                    <h4 class="cuadro-texto">El chapuzón</h4>
+                </div>
+            </a>
+            <a class="obras-popup" href="javascript:ventanaSecundaria('popups-obras/habitacion-compartida_100x100.html')">
+                <div class="cuadro-contenedor">
+                    <img class="cuadro-imagen" src="images/cuadros/habitacion-compartida_100x100.jpg" alt="Habitación compartida"/>
+                    <h4 class="cuadro-texto">Habitación compartida</h4>
+                </div>
+            </a>
+            <a class="obras-popup" href="javascript:ventanaSecundaria('popups-obras/la-metropolis_130x100.html')">
+                <div class="cuadro-contenedor">
+                    <img class="cuadro-imagen" src="images/cuadros/la-metropolis_130x100.jpg" alt="La metrópolis"/>
+                    <h4 class="cuadro-texto">La metrópolis</h4>
+                </div>
+            </a>
+            <a class="obras-popup" href="javascript:ventanaSecundaria('popups-obras/noche-de-caos-en-el-estudio_100x100.html')">
+                <div class="cuadro-contenedor">
+                    <img class="cuadro-imagen" src="images/cuadros/noche-de-caos-en-el-estudio_100x100.jpg" alt="Noche de caos en el estudio"/>
+                    <h4 class="cuadro-texto">Noche de caos<br> en el estudio</h4>
+                </div>
+            </a>
+            <a class="obras-popup" href="javascript:ventanaSecundaria('popups-obras/norte_50x70.html')">
+                <div class="cuadro-contenedor">
+                    <img class="cuadro-imagen" src="images/cuadros/norte_50x70.png" alt="Norte"/>
+                    <h4 class="cuadro-texto">Norte</h4>
+                </div>
+            </a>
+            <a class="obras-popup" href="javascript:ventanaSecundaria('popups-obras/puerto_50x70.html')">
+                <div class="cuadro-contenedor">
+                    <img class="cuadro-imagen" src="images/cuadros/puerto_50x70.jpeg" alt="Puerto"/>
+                    <h4 class="cuadro-texto">Puerto</h4>
+                </div>
+            </a>
+        </div>
+    </section>
+        <section class="background-obras-mobile">
+            <div class="obras">
+                <input id="abrir-cuadro1" type="checkbox" class="abrir-cuadro-input">
+                   <div class="cuadro-contenedor"> 
+                            <h4 class="titulo-cuadro-mobile">1955</h4>  
+                        <label for="abrir-cuadro1" class="abrir-cuadro-label"><img class="cuadro-imagen" src="images/cuadros/1955_130x100.jpeg" alt="1955"/></label>
+                            <p class="descripcion-cuadro-mobile">130x100cm<br>Tela linda</p>
+                    </div>
+               <input id="abrir-cuadro2" type="checkbox" class="abrir-cuadro-input">
+                   <div class="cuadro-contenedor">
+                           <h4 class="titulo-cuadro-mobile">Desocupados</h4>
+                       <label for="abrir-cuadro2" class="abrir-cuadro-label"><img class="cuadro-imagen" src="images/cuadros/desocupados_130x100.jpeg" alt="Desocupados"/></label>
+                           <p class="descripcion-cuadro-mobile">130x100cm<br>Tela linda</p>
+                    </div>
+               <input id="abrir-cuadro3" type="checkbox" class="abrir-cuadro-input">
+                    <div class="cuadro-contenedor">
+                            <h4 class="titulo-cuadro-mobile">Hotel</h4>
+                        <label for="abrir-cuadro3" class="abrir-cuadro-label"><img class="cuadro-imagen" src="images/cuadros/hotel_50x70.jpeg" alt="Hotel"/></label>
+                            <p class="descripcion-cuadro-mobile">50x70cm<br>Tela linda</p>
+                    </div>
+                <input id="abrir-cuadro4" type="checkbox" class="abrir-cuadro-input">
+                    <div class="cuadro-contenedor">
+                            <h4 class="titulo-cuadro-mobile">La última partida</h4>
+                        <label for="abrir-cuadro4" class="abrir-cuadro-label"><img class="cuadro-imagen" src="images/cuadros/la-ultima-partida_130x100.jpg" alt="La última partida"/></label>
+                            <p class="descripcion-cuadro-mobile">130x100cm<br>Tela linda</p>
+                    </div>   
+                <input id="abrir-cuadro5" type="checkbox" class="abrir-cuadro-input">
+                    <div class="cuadro-contenedor">
+                            <h4 class="titulo-cuadro-mobile">Manifestación</h4>
+                        <label for="abrir-cuadro5" class="abrir-cuadro-label"><img class="cuadro-imagen" src="images/cuadros/manifestacion_80x100.jpeg" alt="Manifestación"/></label>
+                            <p class="descripcion-cuadro-mobile">80x100cm<br>Tela linda</p>
+                    </div> 
+                <input id="abrir-cuadro6" type="checkbox" class="abrir-cuadro-input">
+                    <div class="cuadro-contenedor">
+                            <h4 class="titulo-cuadro-mobile">Los Bañistes</h4>
+                        <label for="abrir-cuadro6" class="abrir-cuadro-label"><img class="cuadro-imagen" src="images/cuadros/los-banistes_80x100.jpg" alt="Los bañistes"/></label>
+                            <p class="descripcion-cuadro-mobile">80x100cm<br>Tela linda</p>
+                    </div> 
+                <input id="abrir-cuadro7" type="checkbox" class="abrir-cuadro-input">
+                    <div class="cuadro-contenedor">
+                            <h4 class="titulo-cuadro-mobile">Fermin</h4>
+                        <label for="abrir-cuadro7" class="abrir-cuadro-label"><img class="cuadro-imagen" src="images/cuadros/fermin_80x100.jpg" alt="Fermin"/></label>
+                            <p class="descripcion-cuadro-mobile">80x100cm<br>Tela linda</p>
+                    </div>                         
+                <input id="abrir-cuadro8" type="checkbox" class="abrir-cuadro-input">
+                    <div class="cuadro-contenedor">
+                            <h4 class="titulo-cuadro-mobile">Ana no duerme</h4>
+                        <label for="abrir-cuadro8" class="abrir-cuadro-label"><img class="cuadro-imagen" src="images/cuadros/ana-no-duerme_50x70.jpg" alt="Ana no duerme"/></label>
+                            <p class="descripcion-cuadro-mobile">50x70cm<br>Tela linda</p>
+                    </div>   
+                <input id="abrir-cuadro9" type="checkbox" class="abrir-cuadro-input">
+                    <div class="cuadro-contenedor">
+                            <h4 class="titulo-cuadro-mobile">El chapuzón</h4>
+                        <label for="abrir-cuadro9" class="abrir-cuadro-label"><img class="cuadro-imagen" src="images/cuadros/el-chapuzon_50x70.jpg" alt="El chapuzón"/></label>
+                            <p class="descripcion-cuadro-mobile">50x70cm<br>Tela linda</p>
+                    </div>   
+                <input id="abrir-cuadro10" type="checkbox" class="abrir-cuadro-input">
+                    <div class="cuadro-contenedor">
+                            <h4 class="titulo-cuadro-mobile">Habitación compartida</h4>
+                        <label for="abrir-cuadro10" class="abrir-cuadro-label"><img class="cuadro-imagen" src="images/cuadros/habitacion-compartida_100x100.jpg" alt="Habitación compartida"/></label>
+                            <p class="descripcion-cuadro-mobile">100x100cm<br>Tela linda</p>
+                    </div> 
+                <input id="abrir-cuadro11" type="checkbox" class="abrir-cuadro-input">
+                    <div class="cuadro-contenedor">
+                            <h4 class="titulo-cuadro-mobile">La metrópolis</h4>
+                        <label for="abrir-cuadro11" class="abrir-cuadro-label"><img class="cuadro-imagen" src="images/cuadros/la-metropolis_130x100.jpg" alt="La metrópolis"/></label>
+                            <p class="descripcion-cuadro-mobile">130x100cm<br>Tela linda</p>
+                    </div> 
+                <input id="abrir-cuadro12" type="checkbox" class="abrir-cuadro-input">
+                    <div class="cuadro-contenedor">
+                            <h4 class="titulo-cuadro-mobile">Noche de caos en el estudio</h4>
+                        <label for="abrir-cuadro12" class="abrir-cuadro-label"><img class="cuadro-imagen" src="images/cuadros/noche-de-caos-en-el-estudio_100x100.jpg" alt="Noche de caos en el estudio"/></label>
+                        <p class="descripcion-cuadro-mobile">100x100cm<br>Tela linda</p>
+                    </div> 
+                <input id="abrir-cuadro13" type="checkbox" class="abrir-cuadro-input">
+                    <div class="cuadro-contenedor">
+                            <h4 class="titulo-cuadro-mobile">Norte</h4>
+                        <label for="abrir-cuadro13" class="abrir-cuadro-label"><img class="cuadro-imagen" src="images/cuadros/norte_50x70.png" alt="Norte"/></label>
+                            <p class="descripcion-cuadro-mobile">50x70cm<br>Tela linda</p>
+                    </div>                        
+                <input id="abrir-cuadro14" type="checkbox" class="abrir-cuadro-input">
+                    <div class="cuadro-contenedor">
+                            <h4 class="titulo-cuadro-mobile">Puerto</h4>
+                        <label for="abrir-cuadro14" class="abrir-cuadro-label"><img class="cuadro-imagen" src="images/cuadros/puerto_50x70.jpeg" alt="Puerto"/></label>
+                            <p class="descripcion-cuadro-mobile">50x70cm<br>Tela linda</p>
+                    </div>  
+            </div>
+        </section>
+    <h2 class="titulo-exposicion" id="galeria">GALERIA</h2>
+    <aside class="background-exposicion">
+        <div class="exposicion">
+            <iframe class="mapa-exposicion" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.4523569988173!2d-58.43653918519569!3d-34.59272116442247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb64f8bda719%3A0x8c6a8f250951b0d0!2sAdriana%20Budich%20Arte%20Contempor%C3%A1neo!5e0!3m2!1ses!2sar!4v1595796346826!5m2!1ses!2sar" 
+            width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <ul class="info-exposicion">
+                <li class="titulo-info-exposicion"><h3>ADRIANA BUDICH ARTE CONTEMPORÁNEO</h3></li>
+                <li class="item-info-exposicion"><strong>Dirección</strong><br>Gurruchaga 1145, Villa Crespo,<br> Buenos Aires, Argentina.</li><br>
+                <li class="item-info-exposicion"><strong>Teléfono</strong><br>+54 9 11 6172 2112</li><br>
+                <li class="item-info-exposicion"><strong>Página Web</strong><br><a href="https://www.adrianabudich.com/">https://www.adrianabudich.com/</a></li><br>
+            </ul>
+        </div>
+    </aside>
+    <footer class="background-contacto">
+        <h2 class="titulo-contacto">CONTACTO</h2>
+        <div class="contacto" id="contacto">
+            <form class="formulario-contacto" method="post" action="sendbymail.php" enctype="text/plain">
+                <input type="text" name="nombre" placeholder="Nombre" required>
+                <input type="text" name="apellido" placeholder="Apellido" required>
+                <input type="number" name="telefono" placeholder="Número de contacto" required>
+                <input type="email" name="mail" placeholder="Mail"><br>
+                <textarea name="comentarios" placeholder="Dejá tus comentarios" required></textarea><br>
+                <button class="boton-contacto" type="submit">ENVIAR</button>
+            </form>
+            <div class="redes-contacto">
+                <div class="boton-background">
+                    <a href="https://www.instagram.com/moscovicz_/"><img class="boton-imagen" src="images/boton-instagram.svg" alt="Instagram"/></a>
+                </div>
+                <div class="boton-background">
+                    <a href="https://api.whatsapp.com/send?phone=5491150128930"><img class="boton-imagen" src="images/boton-whatsapp.svg" alt="WhatsApp"/></a>
+                </div>
+            </div>
+        </div>
+        <p class="datos-web">Pagina web creada por&nbsp;<a href="https://api.whatsapp.com/send?phone=5491150258243">Federico Kolonski</a></p>
+    </footer>
+</header>
+</body>
+</html>
