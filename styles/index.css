@@ -8,6 +8,7 @@ html, body {
 
 body {
     font-family: 'Cutive Mono', monospace;
+    scroll-behavior: smooth;
 }
 
 header {
@@ -343,6 +344,11 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
     margin: 5px;
     width: 70%;
     max-width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.089);
+    font-family: 'Cutive Mono', monospace;
 }
 
 .formulario-contacto > textarea {
@@ -350,9 +356,13 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
     width: 70%;
     max-width: 420px;
     height: 70px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.089);
+    font-family: 'Cutive Mono', monospace;
 }
 
-.formulario-contacto > ::placeholder {
+::-webkit-input-placeholder {
     text-align: center;
     font-family: 'Cutive Mono', monospace;
 }
@@ -360,7 +370,17 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
 .boton-contacto {
     width: 40%;
     max-width: 200px;
-    margin: 5px;
+    height: 30px;
+    margin: 10px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.089);
+    background-color: rgb(219, 219, 219);
+    font-weight: bold;
+}
+
+.boton-contacto:hover {
+    background-color: rgb(155, 155, 155);
 }
 
 .redes-contacto {
