@@ -12,16 +12,38 @@ body {
 }
 
 header {
-    height: 150px;
+    height: auto;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 50px;
-    padding-left: 30px;
-    padding-bottom: 20px;
+    flex-direction: column;
     box-sizing: border-box;
 }
+
+/* galeria virtual */
+.exposicion-temporal {
+    width: 100%;
+    height: auto;
+    background-color: rgba(99, 0, 0, 0.445);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.exposicion-temporal:hover {
+    background-color: rgba(99, 0, 0, 0.712);
+}
+
+.exposicion-temporal-text {
+    margin: 10px auto;
+}
+
+/* fin galeria virtual */
 
 nav {
     display: flex;
@@ -29,7 +51,7 @@ nav {
 }
 
 .menu {
-    width: 500px;
+    width: 400px;
     height: 30px;
     list-style: none;
     display: flex;
@@ -38,7 +60,7 @@ nav {
     align-items: center;
     font-size: 18px;
     font-weight: 1000;
-    margin: 20px 0;
+    margin: 0 0 20px 0;
 }
 
 .menu-mobile-background {
@@ -257,6 +279,7 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
     opacity: .5;
     transition: .5s;
     transform: scale(1.2);
+    margin: auto;
 }
 
 .exposicion {
@@ -302,7 +325,8 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
 .background-contacto {
     width: 100%;
     height: auto;
-    background-color: rgba(201, 201, 201, 0.267);
+    background-color: rgba(109, 109, 109, 0.192);
+    box-shadow: 5px 5px 5px 5px rgba(128, 128, 128, 0.363);
     margin: 30px 0 0 0;
     box-sizing: border-box;
     padding-top: 1px; 
@@ -375,12 +399,12 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
     border-radius: 10px;
     border: none;
     box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.089);
-    background-color: rgb(219, 219, 219);
+    background-color: rgb(177, 177, 177);
     font-weight: bold;
 }
 
 .boton-contacto:hover {
-    background-color: rgb(155, 155, 155);
+    background-color: rgb(112, 112, 112);
 }
 
 .redes-contacto {
@@ -415,6 +439,10 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
     margin: 10px;
 }
 
+.boton-up {
+    display: none;
+}
+
 @media (max-width: 1024px) {
 
     html, body {
@@ -423,6 +451,12 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
         overflow-x: hidden;
         margin: 0;
         padding: 0;
+    }
+
+    .logo {
+        width: 60%;
+        max-width: 400px;
+        min-width: 200px;
     }
 
     .obras {
@@ -451,10 +485,8 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
     }
 
     header {
-        height: 150px;
+        height: auto;
         width: 100%;
-        padding-top: 30px;
-        padding-left: 0px;
         box-sizing: border-box;
     }
 
@@ -638,6 +670,17 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
     .formulario-contacto > input {
         width: 100%;
         height: auto;
+    }
+
+    .boton-up {
+        display: flex;
+        align-items: flex-end;
+        justify-content: right;
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+        width: 40px;
+        height: 40px;
     }
     
 }
