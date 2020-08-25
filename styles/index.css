@@ -577,6 +577,10 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
         font-weight: 1000;
     }
 
+    .slider {
+        display: none;
+    }
+
     .pagination {
         display: none;
     }
@@ -586,7 +590,7 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
     }
 
     .texto-obras {
-        margin: 23px auto 10px 19px;
+        margin: 0 auto 10px 19px;
         text-align: center;
         font-size: 26px;
     }
