@@ -108,9 +108,9 @@ img{
 .slide{
     display: flex;
     transform: translate3d(0, 0, 0);
-    transition: all 800ms;
+    transition: all 1000ms;
     animation-name: autoplay;
-    animation-duration: 10s;
+    animation-duration: 20s;
     animation-direction: alternate;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
