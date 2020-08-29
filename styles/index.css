@@ -698,6 +698,10 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
         padding: 0;
     }
 
+    .contacto {
+        width: 80%;
+    }
+
     .titulo-contacto {
         text-align: center;
         position: relative;
@@ -705,13 +709,25 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
     }
 
     .formulario-contacto {
-        padding: 0;
+        padding: 0px;
         width: 100%;
+        height: auto;
     }
 
     .formulario-contacto > input {
         width: 100%;
-        height: auto;
+        height: 30px;
+        max-width: none;
+    }
+
+    .formulario-contacto > textarea {
+        width: 100%;
+        height: 80px;
+        max-width: none;
+    }
+
+    .formulario-contacto > button {
+        width: 80%;
     }
 
     .boton-up {
