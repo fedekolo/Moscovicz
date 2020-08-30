@@ -51,6 +51,7 @@ header {
     align-items: center;
     flex-direction: column;
     box-sizing: border-box;
+    padding-top: 10px;
 }
 
 /* galeria virtual */
@@ -547,9 +548,8 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
     }
 
     .menu-icono {
-        width: 30px;
-        height: 30px;
-        margin-bottom: 15px;
+        width: 45px;
+        height: 45px;
     }
 
     .menu-mobile-label {
@@ -557,6 +557,7 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
         display: flex;
         justify-content: center;
         align-items: center;
+        margin: 3px auto;
     }
 
     .menu-mobile {
@@ -565,13 +566,11 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
         list-style: none;
         text-align: center;
         align-items: center;
-        border-top: 2px solid black;
-        border-bottom: 2px solid black;
         height: 0;
         width: 100%;
         padding: 5px 0;
-        line-height: 1.7;
-        margin-top: 0;
+        line-height: 1.9;
+        margin: 0 auto;
         box-sizing: border-box;
         font-weight: 1000;
         transition: height 1s ease;
@@ -582,8 +581,16 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
         display: none;
     }
 
+    .item-menu {
+        font-size: 20px;
+    }
+
     .menu-mobile-input:checked ~ .menu-mobile {
-        height: 100px;
+        height: 130px;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        margin: 10px auto;
+        transition: all 1s ease;
     }
 
     .slider {
@@ -599,9 +606,10 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
     }
 
     .texto-obras {
-        margin: 0 auto 10px 19px;
+        margin: 5px auto 15px 13px;
         text-align: center;
-        font-size: 26px;
+        font-size: 32px;
+        width: 100%;
     }
 
     .background-obras {
@@ -684,9 +692,14 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
         bottom: 5px;
     }
 
+    .cuadro-contenedor {
+        width: 100%;
+        height: auto;
+    }
+
     .cuadro-imagen {
         margin: 5px 0;
-        width: auto;
+        width: 100%;
         height: auto;
     }
 
