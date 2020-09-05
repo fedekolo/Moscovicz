@@ -63,6 +63,16 @@
             return{'init':init}
         }
         Loading(1000).init();
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 160) {
+                if (!document.querySelector('.logoMenu').classList.contains('show')){
+                    document.querySelector('.logoMenu').classList.add('show');
+                }
+            } else {
+                document.querySelector('.logoMenu').classList.remove('show');
+            }
+        });
     </script>
 
 </head>
@@ -93,7 +103,9 @@
 
         <!-- menu mobile -->
         <div class="menu-mobile-background">
-            <label for="menu" class="menu-mobile-label"><img class="menu-icono" src="images/open-menu.svg"/></label>
+            <label for="menu" class="menu-mobile-label"><img class="menu-icono" src="images/open-menu.svg"/>
+                <img class="logoMenu" src="images/logo.jpg" alt="Moscovicz"/>
+            </label>
             <input id="menu" type="checkbox" class="menu-mobile-input">
             <ul class="menu-mobile">
                 <li class="item-menu"><a href="#obras-mobile">obras</a></li>

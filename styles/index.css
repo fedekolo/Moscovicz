@@ -1,6 +1,5 @@
 html, body {
     width: 100%; 
-    height: 100%;
     overflow-x: hidden;
     margin: 0;
     padding: 0;
@@ -126,6 +125,22 @@ a:link, a:visited, a:active {
     min-width: 200px;
 }
 
+.logoMenu{
+    display: none;
+    width: 29%;
+    opacity: 1;
+    animation: fade 2s linear;
+}
+
+@keyframes fade {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
+.show{
+    display: block;
+}
+
 img{
     max-width: 100%;
     background-size: cover;
@@ -193,7 +208,6 @@ img{
 .pagination-item img{
     display: inline-block;
     max-width: none;
-    height: 100%;
     transform: scale(1);
     opacity: 0;
     transition: all 300ms;
@@ -484,7 +498,6 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
 
     html, body {
         width: 100%; 
-        height: 100%;
         overflow-x: hidden;
         margin: 0;
         padding: 0;
@@ -515,7 +528,6 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
 
     html, body {
         width: 100%; 
-        height: 100%;
         overflow-x: hidden;
         margin: 0;
         padding: 0;
