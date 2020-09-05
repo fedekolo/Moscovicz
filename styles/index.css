@@ -284,6 +284,10 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
     transition: 2s;
 }
 
+.cuadro-contenedor:hover {
+    height: 250px;
+}
+
 .cuadro-contenedor:hover > .cuadro-texto {
     display: block;
     transition: 2s;
@@ -683,6 +687,10 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
 
     .cuadro-contenedor {
         width: 100%;
+        height: auto;
+    }
+
+    .cuadro-contenedor:hover {
         height: auto;
     }
 
