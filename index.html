@@ -23,46 +23,46 @@
     
     <!-- loader -->
     <script>
-        var Loading = (loadingDelayHidden = 0) => {
-            let loading = null;
-            const myLoadingDelayHidden = loadingDelayHidden;
-            let imgs = [];
-            let lenImgs = 0;
-            let counterImgsLoading = 0;
-            function incrementCounterImgs() {
-                counterImgsLoading += 1;
-                if(counterImgsLoading === lenImgs){
-                    hideLoading()
-                }
-            }
+        // var Loading = (loadingDelayHidden = 0) => {
+        //     let loading = null;
+        //     const myLoadingDelayHidden = loadingDelayHidden;
+        //     let imgs = [];
+        //     let lenImgs = 0;
+        //     let counterImgsLoading = 0;
+        //     function incrementCounterImgs() {
+        //         counterImgsLoading += 1;
+        //         if(counterImgsLoading === lenImgs){
+        //             hideLoading()
+        //         }
+        //     }
             
-            function hideLoading() {
-                if(loading !== null){
-                    loading.classList.remove('show');
-                    setTimeout(function(){
-                        loading.remove()
-                    },
-                    myLoadingDelayHidden)
-                }
-            }
+        //     function hideLoading() {
+        //         if(loading !== null){
+        //             loading.classList.remove('show');
+        //             setTimeout(function(){
+        //                 loading.remove()
+        //             },
+        //             myLoadingDelayHidden)
+        //         }
+        //     }
 
-            function init(){
-                document.addEventListener('DOMContentLoaded', function() {
-                    loading = document.querySelector('.loading');
-                    imgs = Array.from(document.images);
-                    lenImgs = imgs.length;
-                    if(imgs.length === 0){
-                        hideLoading()
-                    } else {
-                        imgs.forEach(function(img) {
-                            img.addEventListener('load',incrementCounterImgs,false)
-                        })
-                    }
-                })
-            }
-            return{'init':init}
-        }
-        Loading(1000).init();
+        //     function init(){
+        //         document.addEventListener('DOMContentLoaded', function() {
+        //             loading = document.querySelector('.loading');
+        //             imgs = Array.from(document.images);
+        //             lenImgs = imgs.length;
+        //             if(imgs.length === 0){
+        //                 hideLoading()
+        //             } else {
+        //                 imgs.forEach(function(img) {
+        //                     img.addEventListener('load',incrementCounterImgs,false)
+        //                 })
+        //             }
+        //         })
+        //     }
+        //     return{'init':init}
+        // }
+        // Loading(1000).init();
 
         window.addEventListener('scroll', function() {
             if (window.scrollY > 160) {
@@ -97,7 +97,6 @@
             <li class="item-menu"><a href="#obras">obras</a></li>
             <li class="item-menu"><a href="#galeria">galeria</a></li>
             <li class="item-menu"><a href="#contacto">contacto</a></li>
-            <!-- <li class="item-menu"><a href="sobremi.html">sobre mi</a></li> -->
         </ul>
         <!-- fin menu desktop -->
 
@@ -113,7 +112,6 @@
                 <li class="item-menu"><a href="#obras-mobile">obras</a></li>
                 <li class="item-menu"><a href="#galeria">galeria</a></li>
                 <li class="item-menu"><a href="#contacto">contacto</a></li>
-                <!-- <li class="item-menu"><a href="sobremi.html">sobre mi</a></li> -->
             </ul>
         </div>
         <!-- fin menu mobile -->
@@ -469,159 +467,506 @@
                 </div>
             </div>
 
-            <input id="abrir-cuadro21" type="checkbox" class="abrir-cuadro-input">
-            <div class="cuadro-contenedor"> 
-                    <h4 class="titulo-cuadro-mobile">Candida erendira 2</h4>  
-                <label for="abrir-cuadro21" class="abrir-cuadro-label"><img class="cuadro-imagen" src="images/cuadros/candida-erendira-2_150x100.jpg" alt="Candida erendira 2"/></label>
-                    <p class="descripcion-cuadro-mobile">150x100cm</p>
-            </div>
-            <input id="abrir-cuadro22" type="checkbox" class="abrir-cuadro-input">
-            <div class="cuadro-contenedor"> 
-                    <h4 class="titulo-cuadro-mobile">Wataru menshiki</h4>  
-                <label for="abrir-cuadro22" class="abrir-cuadro-label"><img class="cuadro-imagen" src="images/cuadros/wataru-menshiki_80x100.jpg" alt="Wataru menshiki"/></label>
-                    <p class="descripcion-cuadro-mobile">80x100cm</p>
-            </div>
-            <input id="abrir-cuadro23" type="checkbox" class="abrir-cuadro-input">
-            <div class="cuadro-contenedor"> 
-                    <h4 class="titulo-cuadro-mobile">Ulises y erendira</h4>  
-                <label for="abrir-cuadro23" class="abrir-cuadro-label"><img class="cuadro-imagen" src="images/cuadros/ulises-y-erendira_150x100.jpg" alt="Ulises y erendira"/></label>
-                    <p class="descripcion-cuadro-mobile">150x100cm</p>
-            </div>
-            <input id="abrir-cuadro24" type="checkbox" class="abrir-cuadro-input">
-            <div class="cuadro-contenedor"> 
-                    <h4 class="titulo-cuadro-mobile">Purmamarca</h4>  
-                <label for="abrir-cuadro24" class="abrir-cuadro-label"><img class="cuadro-imagen" src="images/cuadros/purmamarca_50x70.jpg" alt="Purmamarca"/></label>
-                    <p class="descripcion-cuadro-mobile">50x70cm</p>
-            </div>
-            <input id="abrir-cuadro25" type="checkbox" class="abrir-cuadro-input">
-            <div class="cuadro-contenedor"> 
-                    <h4 class="titulo-cuadro-mobile">Palermo</h4>  
-                <label for="abrir-cuadro25" class="abrir-cuadro-label"><img class="cuadro-imagen" src="images/cuadros/palermo_50x70.jpg" alt="Palermo"/></label>
-                    <p class="descripcion-cuadro-mobile">50x70cm</p>
-            </div>
-            <input id="abrir-cuadro26" type="checkbox" class="abrir-cuadro-input">
-            <div class="cuadro-contenedor"> 
-                    <h4 class="titulo-cuadro-mobile">Nada está completo</h4>  
-                <label for="abrir-cuadro26" class="abrir-cuadro-label"><img class="cuadro-imagen" src="images/cuadros/nada-esta-completo_130x100.jpg" alt="Nada está completo"/></label>
-                    <p class="descripcion-cuadro-mobile">130x100cm</p>
-            </div>
-            <input id="abrir-cuadro27" type="checkbox" class="abrir-cuadro-input">
-            <div class="cuadro-contenedor"> 
-                    <h4 class="titulo-cuadro-mobile">La espera</h4>  
-                <label for="abrir-cuadro27" class="abrir-cuadro-label"><img class="cuadro-imagen" src="images/cuadros/la-espera_50x70.jpg" alt="La espera"/></label>
-                    <p class="descripcion-cuadro-mobile">50x70cm</p>
-            </div>
-            <input id="abrir-cuadro28" type="checkbox" class="abrir-cuadro-input">
-            <div class="cuadro-contenedor"> 
-                    <h4 class="titulo-cuadro-mobile">La dama de la boca</h4>  
-                <label for="abrir-cuadro28" class="abrir-cuadro-label"><img class="cuadro-imagen" src="images/cuadros/la-dama-de-la-boca.jpg" alt="La dama de la boca"/></label>
-                    <p class="descripcion-cuadro-mobile"></p>
-            </div>
-            <input id="abrir-cuadro29" type="checkbox" class="abrir-cuadro-input">
-            <div class="cuadro-contenedor"> 
-                    <h4 class="titulo-cuadro-mobile">Disturbios en Chile</h4>  
-                <label for="abrir-cuadro29" class="abrir-cuadro-label"><img class="cuadro-imagen" src="images/cuadros/disturbios-en-chile.jpg" alt="Disturbios en Chile"/></label>
-                    <p class="descripcion-cuadro-mobile"></p>
-            </div>
-            <input id="abrir-cuadro30" type="checkbox" class="abrir-cuadro-input">
-            <div class="cuadro-contenedor"> 
-                    <h4 class="titulo-cuadro-mobile">Dia 145</h4>  
-                <label for="abrir-cuadro30" class="abrir-cuadro-label"><img class="cuadro-imagen" src="images/cuadros/dia-145.jpg" alt="Dia 145"/></label>
-                    <p class="descripcion-cuadro-mobile"></p>
-            </div>
-            <input id="abrir-cuadro31" type="checkbox" class="abrir-cuadro-input">
-            <div class="cuadro-contenedor"> 
-                    <h4 class="titulo-cuadro-mobile">Dia 112</h4>  
-                <label for="abrir-cuadro31" class="abrir-cuadro-label"><img class="cuadro-imagen" src="images/cuadros/dia-112_50x70.jpg" alt="Dia 112"/></label>
-                    <p class="descripcion-cuadro-mobile">50x70cm</p>
-            </div>            
-            <input id="abrir-cuadro1" type="checkbox" class="abrir-cuadro-input">
-                <div class="cuadro-contenedor"> 
-                        <h4 class="titulo-cuadro-mobile">1955</h4>  
-                    <label for="abrir-cuadro1" class="abrir-cuadro-label"><img class="cuadro-imagen" src="images/cuadros/1955_130x100.jpg" alt="1955"/></label>
-                        <p class="descripcion-cuadro-mobile">130x100cm</p>
-                </div>
-            <input id="abrir-cuadro2" type="checkbox" class="abrir-cuadro-input">
-                <div class="cuadro-contenedor">
-                        <h4 class="titulo-cuadro-mobile">Desocupados</h4>
-                    <label for="abrir-cuadro2" class="abrir-cuadro-label"><img class="cuadro-imagen" src="images/cuadros/desocupados_130x100.jpg" alt="Desocupados"/></label>
-                        <p class="descripcion-cuadro-mobile">130x100cm</p>
-                </div>
-            <input id="abrir-cuadro3" type="checkbox" class="abrir-cuadro-input">
-                <div class="cuadro-contenedor">
-                        <h4 class="titulo-cuadro-mobile">Hotel</h4>
-                    <label for="abrir-cuadro3" class="abrir-cuadro-label"><img class="cuadro-imagen" src="images/cuadros/hotel_50x70.jpg" alt="Hotel"/></label>
-                        <p class="descripcion-cuadro-mobile">50x70cm</p>
-                </div>
-            <input id="abrir-cuadro4" type="checkbox" class="abrir-cuadro-input">
-                <div class="cuadro-contenedor">
-                        <h4 class="titulo-cuadro-mobile">La última partida</h4>
-                    <label for="abrir-cuadro4" class="abrir-cuadro-label"><img class="cuadro-imagen" src="images/cuadros/la-ultima-partida_130x100.jpg" alt="La última partida"/></label>
-                        <p class="descripcion-cuadro-mobile">130x100cm</p>
-                </div>   
-            <input id="abrir-cuadro5" type="checkbox" class="abrir-cuadro-input">
-                <div class="cuadro-contenedor">
-                        <h4 class="titulo-cuadro-mobile">Manifestación</h4>
-                    <label for="abrir-cuadro5" class="abrir-cuadro-label"><img class="cuadro-imagen" src="images/cuadros/manifestacion_80x100.jpg" alt="Manifestación"/></label>
-                        <p class="descripcion-cuadro-mobile">80x100cm</p>
-                </div> 
-            <input id="abrir-cuadro6" type="checkbox" class="abrir-cuadro-input">
-                <div class="cuadro-contenedor">
-                        <h4 class="titulo-cuadro-mobile">Los Bañistes</h4>
-                    <label for="abrir-cuadro6" class="abrir-cuadro-label"><img class="cuadro-imagen" src="images/cuadros/los-banistes_80x100.jpg" alt="Los bañistes"/></label>
-                        <p class="descripcion-cuadro-mobile">80x100cm</p>
-                </div> 
             <input id="abrir-cuadro7" type="checkbox" class="abrir-cuadro-input">
-                <div class="cuadro-contenedor">
-                        <h4 class="titulo-cuadro-mobile">Fermin</h4>
-                    <label for="abrir-cuadro7" class="abrir-cuadro-label"><img class="cuadro-imagen" src="images/cuadros/fermin_80x100.jpg" alt="Fermin"/></label>
-                        <p class="descripcion-cuadro-mobile">80x100cm</p>
-                </div>                         
-            <input id="abrir-cuadro8" type="checkbox" class="abrir-cuadro-input">
-                <div class="cuadro-contenedor">
-                        <h4 class="titulo-cuadro-mobile">Ana no duerme</h4>
-                    <label for="abrir-cuadro8" class="abrir-cuadro-label"><img class="cuadro-imagen" src="images/cuadros/ana-no-duerme_50x70.jpg" alt="Ana no duerme"/></label>
-                        <p class="descripcion-cuadro-mobile">50x70cm</p>
-                </div>   
-            <input id="abrir-cuadro9" type="checkbox" class="abrir-cuadro-input">
-                <div class="cuadro-contenedor">
-                        <h4 class="titulo-cuadro-mobile">El chapuzón</h4>
-                    <label for="abrir-cuadro9" class="abrir-cuadro-label"><img class="cuadro-imagen" src="images/cuadros/el-chapuzon_50x70.jpg" alt="El chapuzón"/></label>
-                        <p class="descripcion-cuadro-mobile">50x70cm</p>
-                </div>   
-            <input id="abrir-cuadro10" type="checkbox" class="abrir-cuadro-input">
-                <div class="cuadro-contenedor">
-                        <h4 class="titulo-cuadro-mobile">Habitación compartida</h4>
-                    <label for="abrir-cuadro10" class="abrir-cuadro-label"><img class="cuadro-imagen" src="images/cuadros/habitacion-compartida_100x100.jpg" alt="Habitación compartida"/></label>
-                        <p class="descripcion-cuadro-mobile">100x100cm</p>
-                </div> 
-            <input id="abrir-cuadro11" type="checkbox" class="abrir-cuadro-input">
-                <div class="cuadro-contenedor">
-                        <h4 class="titulo-cuadro-mobile">La metrópolis</h4>
-                    <label for="abrir-cuadro11" class="abrir-cuadro-label"><img class="cuadro-imagen" src="images/cuadros/la-metropolis_130x100.jpg" alt="La metrópolis"/></label>
-                        <p class="descripcion-cuadro-mobile">130x100cm</p>
-                </div> 
-            
+            <input id="abrir-descripcion7" type="checkbox" class="abrir-descripcion-input">
+            <div class="cuadro-contenedor"> 
+                <img class="cuadro-imagen" src="images/cuadros/candida-erendira-2_150x100.jpg" alt="Candida erendira 2"/>
+            <div class="cuadro-contenedor-descripcion">
+                    <h4 class="titulo-cuadro-mobile">Candida erendira 2</h4> 
+                    <p class="descripcion-cuadro-mobile">150x100cm</p>
+                </div>
+                <div class="cuadro-contenedor-botones">
+                    <label for="abrir-descripcion7" class="abrir-descripcion-label">
+                        <img src="images/down-arrow.svg" alt="Expandir Información" class="boton-down-arrow">
+                        <img src="images/up-arrow.svg" alt="Minimizar Información" class="boton-up-arrow">
+                    </label>
+                    <label for="abrir-cuadro7" class="abrir-cuadro-label">
+                        <img src="images/expand.svg" alt="Expandir" class="boton-expandir">
+                        <img src="images/minimize.svg" alt="Minimizar" class="boton-minimizar">
+                    </label>
+                </div>
+            </div>
 
+            <input id="abrir-cuadro8" type="checkbox" class="abrir-cuadro-input">
+            <input id="abrir-descripcion8" type="checkbox" class="abrir-descripcion-input">
+            <div class="cuadro-contenedor"> 
+                <img class="cuadro-imagen" src="images/cuadros/wataru-menshiki_80x100.jpg" alt="Wataru menshiki"/>
+            <div class="cuadro-contenedor-descripcion">
+                    <h4 class="titulo-cuadro-mobile">Wataru menshiki</h4> 
+                    <p class="descripcion-cuadro-mobile">80x100cm</p>
+                </div>
+                <div class="cuadro-contenedor-botones">
+                    <label for="abrir-descripcion8" class="abrir-descripcion-label">
+                        <img src="images/down-arrow.svg" alt="Expandir Información" class="boton-down-arrow">
+                        <img src="images/up-arrow.svg" alt="Minimizar Información" class="boton-up-arrow">
+                    </label>
+                    <label for="abrir-cuadro8" class="abrir-cuadro-label">
+                        <img src="images/expand.svg" alt="Expandir" class="boton-expandir">
+                        <img src="images/minimize.svg" alt="Minimizar" class="boton-minimizar">
+                    </label>
+                </div>
+            </div>
+
+            <input id="abrir-cuadro9" type="checkbox" class="abrir-cuadro-input">
+            <input id="abrir-descripcion9" type="checkbox" class="abrir-descripcion-input">
+            <div class="cuadro-contenedor"> 
+                <img class="cuadro-imagen" src="images/cuadros/ulises-y-erendira_150x100.jpg" alt="Ulises y erendira"/>
+            <div class="cuadro-contenedor-descripcion">
+                    <h4 class="titulo-cuadro-mobile">Ulises y erendira</h4> 
+                    <p class="descripcion-cuadro-mobile">150x100cm</p>
+                </div>
+                <div class="cuadro-contenedor-botones">
+                    <label for="abrir-descripcion9" class="abrir-descripcion-label">
+                        <img src="images/down-arrow.svg" alt="Expandir Información" class="boton-down-arrow">
+                        <img src="images/up-arrow.svg" alt="Minimizar Información" class="boton-up-arrow">
+                    </label>
+                    <label for="abrir-cuadro9" class="abrir-cuadro-label">
+                        <img src="images/expand.svg" alt="Expandir" class="boton-expandir">
+                        <img src="images/minimize.svg" alt="Minimizar" class="boton-minimizar">
+                    </label>
+                </div>
+            </div>
+
+            <input id="abrir-cuadro10" type="checkbox" class="abrir-cuadro-input">
+            <input id="abrir-descripcion10" type="checkbox" class="abrir-descripcion-input">
+            <div class="cuadro-contenedor"> 
+                <img class="cuadro-imagen" src="images/cuadros/purmamarca_50x70.jpg" alt="Purmamarca"/>
+            <div class="cuadro-contenedor-descripcion">
+                    <h4 class="titulo-cuadro-mobile">Purmamarca</h4> 
+                    <p class="descripcion-cuadro-mobile">50x70cm</p>
+                </div>
+                <div class="cuadro-contenedor-botones">
+                    <label for="abrir-descripcion10" class="abrir-descripcion-label">
+                        <img src="images/down-arrow.svg" alt="Expandir Información" class="boton-down-arrow">
+                        <img src="images/up-arrow.svg" alt="Minimizar Información" class="boton-up-arrow">
+                    </label>
+                    <label for="abrir-cuadro10" class="abrir-cuadro-label">
+                        <img src="images/expand.svg" alt="Expandir" class="boton-expandir">
+                        <img src="images/minimize.svg" alt="Minimizar" class="boton-minimizar">
+                    </label>
+                </div>
+            </div>
+
+            <input id="abrir-cuadro11" type="checkbox" class="abrir-cuadro-input">
+            <input id="abrir-descripcion11" type="checkbox" class="abrir-descripcion-input">
+            <div class="cuadro-contenedor"> 
+                <img class="cuadro-imagen" src="images/cuadros/palermo_50x70.jpg" alt="Palermo"/>
+            <div class="cuadro-contenedor-descripcion">
+                    <h4 class="titulo-cuadro-mobile">Palermo</h4> 
+                    <p class="descripcion-cuadro-mobile">50x70cm</p>
+                </div>
+                <div class="cuadro-contenedor-botones">
+                    <label for="abrir-descripcion11" class="abrir-descripcion-label">
+                        <img src="images/down-arrow.svg" alt="Expandir Información" class="boton-down-arrow">
+                        <img src="images/up-arrow.svg" alt="Minimizar Información" class="boton-up-arrow">
+                    </label>
+                    <label for="abrir-cuadro11" class="abrir-cuadro-label">
+                        <img src="images/expand.svg" alt="Expandir" class="boton-expandir">
+                        <img src="images/minimize.svg" alt="Minimizar" class="boton-minimizar">
+                    </label>
+                </div>
+            </div>
 
             <input id="abrir-cuadro12" type="checkbox" class="abrir-cuadro-input">
-                <div class="cuadro-contenedor">
-                        <h4 class="titulo-cuadro-mobile">Noche de caos en el estudio</h4>
-                    <label for="abrir-cuadro12" class="abrir-cuadro-label"><img class="cuadro-imagen" src="images/cuadros/noche-de-caos-en-el-estudio_100x100.jpg" alt="Noche de caos en el estudio"/></label>
-                    <p class="descripcion-cuadro-mobile">100x100cm</p>
-                </div> 
+            <input id="abrir-descripcion12" type="checkbox" class="abrir-descripcion-input">
+            <div class="cuadro-contenedor"> 
+                <img class="cuadro-imagen" src="images/cuadros/nada-esta-completo_130x100.jpg" alt="Nada está completo"/>
+            <div class="cuadro-contenedor-descripcion">
+                    <h4 class="titulo-cuadro-mobile">Nada está completo</h4> 
+                    <p class="descripcion-cuadro-mobile">130x100cm</p>
+                </div>
+                <div class="cuadro-contenedor-botones">
+                    <label for="abrir-descripcion12" class="abrir-descripcion-label">
+                        <img src="images/down-arrow.svg" alt="Expandir Información" class="boton-down-arrow">
+                        <img src="images/up-arrow.svg" alt="Minimizar Información" class="boton-up-arrow">
+                    </label>
+                    <label for="abrir-cuadro12" class="abrir-cuadro-label">
+                        <img src="images/expand.svg" alt="Expandir" class="boton-expandir">
+                        <img src="images/minimize.svg" alt="Minimizar" class="boton-minimizar">
+                    </label>
+                </div>
+            </div>
+
             <input id="abrir-cuadro13" type="checkbox" class="abrir-cuadro-input">
-                <div class="cuadro-contenedor">
-                        <h4 class="titulo-cuadro-mobile">Norte</h4>
-                    <label for="abrir-cuadro13" class="abrir-cuadro-label"><img class="cuadro-imagen" src="images/cuadros/norte_50x70.jpg" alt="Norte"/></label>
-                        <p class="descripcion-cuadro-mobile">50x70cm</p>
-                </div>                        
+            <input id="abrir-descripcion13" type="checkbox" class="abrir-descripcion-input">
+            <div class="cuadro-contenedor"> 
+                <img class="cuadro-imagen" src="images/cuadros/la-espera_50x70.jpg" alt="La espera"/>
+            <div class="cuadro-contenedor-descripcion">
+                    <h4 class="titulo-cuadro-mobile">La espera</h4> 
+                    <p class="descripcion-cuadro-mobile">50x70cm</p>
+                </div>
+                <div class="cuadro-contenedor-botones">
+                    <label for="abrir-descripcion13" class="abrir-descripcion-label">
+                        <img src="images/down-arrow.svg" alt="Expandir Información" class="boton-down-arrow">
+                        <img src="images/up-arrow.svg" alt="Minimizar Información" class="boton-up-arrow">
+                    </label>
+                    <label for="abrir-cuadro13" class="abrir-cuadro-label">
+                        <img src="images/expand.svg" alt="Expandir" class="boton-expandir">
+                        <img src="images/minimize.svg" alt="Minimizar" class="boton-minimizar">
+                    </label>
+                </div>
+            </div>
+
             <input id="abrir-cuadro14" type="checkbox" class="abrir-cuadro-input">
-                <div class="cuadro-contenedor">
-                        <h4 class="titulo-cuadro-mobile">Puerto</h4>
-                    <label for="abrir-cuadro14" class="abrir-cuadro-label"><img class="cuadro-imagen" src="images/cuadros/puerto_50x70.jpg" alt="Puerto"/></label>
-                        <p class="descripcion-cuadro-mobile">50x70cm</p>
-                </div>  
+            <input id="abrir-descripcion14" type="checkbox" class="abrir-descripcion-input">
+            <div class="cuadro-contenedor"> 
+                <img class="cuadro-imagen" src="images/cuadros/la-dama-de-la-boca.jpg" alt="La dama de la boca"/>
+            <div class="cuadro-contenedor-descripcion">
+                    <h4 class="titulo-cuadro-mobile">La dama de la boca</h4> 
+                    <p class="descripcion-cuadro-mobile">Consultar medida</p>
+                </div>
+                <div class="cuadro-contenedor-botones">
+                    <label for="abrir-descripcion14" class="abrir-descripcion-label">
+                        <img src="images/down-arrow.svg" alt="Expandir Información" class="boton-down-arrow">
+                        <img src="images/up-arrow.svg" alt="Minimizar Información" class="boton-up-arrow">
+                    </label>
+                    <label for="abrir-cuadro14" class="abrir-cuadro-label">
+                        <img src="images/expand.svg" alt="Expandir" class="boton-expandir">
+                        <img src="images/minimize.svg" alt="Minimizar" class="boton-minimizar">
+                    </label>
+                </div>
+            </div>
+
+            <input id="abrir-cuadro15" type="checkbox" class="abrir-cuadro-input">
+            <input id="abrir-descripcion15" type="checkbox" class="abrir-descripcion-input">
+            <div class="cuadro-contenedor"> 
+                <img class="cuadro-imagen" src="images/cuadros/disturbios-en-chile.jpg" alt="Disturbios en Chile"/>
+            <div class="cuadro-contenedor-descripcion">
+                    <h4 class="titulo-cuadro-mobile">Disturbios en Chile</h4> 
+                    <p class="descripcion-cuadro-mobile">Consultar medida</p>
+                </div>
+                <div class="cuadro-contenedor-botones">
+                    <label for="abrir-descripcion15" class="abrir-descripcion-label">
+                        <img src="images/down-arrow.svg" alt="Expandir Información" class="boton-down-arrow">
+                        <img src="images/up-arrow.svg" alt="Minimizar Información" class="boton-up-arrow">
+                    </label>
+                    <label for="abrir-cuadro15" class="abrir-cuadro-label">
+                        <img src="images/expand.svg" alt="Expandir" class="boton-expandir">
+                        <img src="images/minimize.svg" alt="Minimizar" class="boton-minimizar">
+                    </label>
+                </div>
+            </div>
+
+            <input id="abrir-cuadro16" type="checkbox" class="abrir-cuadro-input">
+            <input id="abrir-descripcion16" type="checkbox" class="abrir-descripcion-input">
+            <div class="cuadro-contenedor"> 
+                <img class="cuadro-imagen" src="images/cuadros/dia-145.jpg" alt="Dia 145"/>
+            <div class="cuadro-contenedor-descripcion">
+                    <h4 class="titulo-cuadro-mobile">Dia 145</h4> 
+                    <p class="descripcion-cuadro-mobile">Consultar medida</p>
+                </div>
+                <div class="cuadro-contenedor-botones">
+                    <label for="abrir-descripcion16" class="abrir-descripcion-label">
+                        <img src="images/down-arrow.svg" alt="Expandir Información" class="boton-down-arrow">
+                        <img src="images/up-arrow.svg" alt="Minimizar Información" class="boton-up-arrow">
+                    </label>
+                    <label for="abrir-cuadro16" class="abrir-cuadro-label">
+                        <img src="images/expand.svg" alt="Expandir" class="boton-expandir">
+                        <img src="images/minimize.svg" alt="Minimizar" class="boton-minimizar">
+                    </label>
+                </div>
+            </div>
+
+            <input id="abrir-cuadro17" type="checkbox" class="abrir-cuadro-input">
+            <input id="abrir-descripcion17" type="checkbox" class="abrir-descripcion-input">
+            <div class="cuadro-contenedor"> 
+                <img class="cuadro-imagen" src="images/cuadros/dia-112_50x70.jpg" alt="Dia 112"/>
+            <div class="cuadro-contenedor-descripcion">
+                    <h4 class="titulo-cuadro-mobile">Dia 112</h4> 
+                    <p class="descripcion-cuadro-mobile">50x70cm</p>
+                </div>
+                <div class="cuadro-contenedor-botones">
+                    <label for="abrir-descripcion17" class="abrir-descripcion-label">
+                        <img src="images/down-arrow.svg" alt="Expandir Información" class="boton-down-arrow">
+                        <img src="images/up-arrow.svg" alt="Minimizar Información" class="boton-up-arrow">
+                    </label>
+                    <label for="abrir-cuadro17" class="abrir-cuadro-label">
+                        <img src="images/expand.svg" alt="Expandir" class="boton-expandir">
+                        <img src="images/minimize.svg" alt="Minimizar" class="boton-minimizar">
+                    </label>
+                </div>
+            </div>
+
+            <input id="abrir-cuadro18" type="checkbox" class="abrir-cuadro-input">
+            <input id="abrir-descripcion18" type="checkbox" class="abrir-descripcion-input">
+            <div class="cuadro-contenedor"> 
+                <img class="cuadro-imagen" src="images/cuadros/1955_130x100.jpg" alt="1955"/>
+            <div class="cuadro-contenedor-descripcion">
+                    <h4 class="titulo-cuadro-mobile">1955</h4> 
+                    <p class="descripcion-cuadro-mobile">130x100cm</p>
+                </div>
+                <div class="cuadro-contenedor-botones">
+                    <label for="abrir-descripcion18" class="abrir-descripcion-label">
+                        <img src="images/down-arrow.svg" alt="Expandir Información" class="boton-down-arrow">
+                        <img src="images/up-arrow.svg" alt="Minimizar Información" class="boton-up-arrow">
+                    </label>
+                    <label for="abrir-cuadro18" class="abrir-cuadro-label">
+                        <img src="images/expand.svg" alt="Expandir" class="boton-expandir">
+                        <img src="images/minimize.svg" alt="Minimizar" class="boton-minimizar">
+                    </label>
+                </div>
+            </div>
+
+            <input id="abrir-cuadro19" type="checkbox" class="abrir-cuadro-input">
+            <input id="abrir-descripcion19" type="checkbox" class="abrir-descripcion-input">
+            <div class="cuadro-contenedor"> 
+                <img class="cuadro-imagen" src="images/cuadros/desocupados_130x100.jpg" alt="Desocupados"/>
+            <div class="cuadro-contenedor-descripcion">
+                    <h4 class="titulo-cuadro-mobile">Desocupados</h4> 
+                    <p class="descripcion-cuadro-mobile">130x100cm</p>
+                </div>
+                <div class="cuadro-contenedor-botones">
+                    <label for="abrir-descripcion19" class="abrir-descripcion-label">
+                        <img src="images/down-arrow.svg" alt="Expandir Información" class="boton-down-arrow">
+                        <img src="images/up-arrow.svg" alt="Minimizar Información" class="boton-up-arrow">
+                    </label>
+                    <label for="abrir-cuadro19" class="abrir-cuadro-label">
+                        <img src="images/expand.svg" alt="Expandir" class="boton-expandir">
+                        <img src="images/minimize.svg" alt="Minimizar" class="boton-minimizar">
+                    </label>
+                </div>
+            </div>
+
+            <input id="abrir-cuadro20" type="checkbox" class="abrir-cuadro-input">
+            <input id="abrir-descripcion20" type="checkbox" class="abrir-descripcion-input">
+            <div class="cuadro-contenedor"> 
+                <img class="cuadro-imagen" src="images/cuadros/hotel_50x70.jpg" alt="Hotel"/>
+            <div class="cuadro-contenedor-descripcion">
+                    <h4 class="titulo-cuadro-mobile">Hotel</h4> 
+                    <p class="descripcion-cuadro-mobile">50x70cm</p>
+                </div>
+                <div class="cuadro-contenedor-botones">
+                    <label for="abrir-descripcion20" class="abrir-descripcion-label">
+                        <img src="images/down-arrow.svg" alt="Expandir Información" class="boton-down-arrow">
+                        <img src="images/up-arrow.svg" alt="Minimizar Información" class="boton-up-arrow">
+                    </label>
+                    <label for="abrir-cuadro20" class="abrir-cuadro-label">
+                        <img src="images/expand.svg" alt="Expandir" class="boton-expandir">
+                        <img src="images/minimize.svg" alt="Minimizar" class="boton-minimizar">
+                    </label>
+                </div>
+            </div>
+
+            <input id="abrir-cuadro21" type="checkbox" class="abrir-cuadro-input">
+            <input id="abrir-descripcion21" type="checkbox" class="abrir-descripcion-input">
+            <div class="cuadro-contenedor"> 
+                <img class="cuadro-imagen" src="images/cuadros/la-ultima-partida_130x100.jpg" alt="La última partida"/>
+            <div class="cuadro-contenedor-descripcion">
+                    <h4 class="titulo-cuadro-mobile">La última partida</h4> 
+                    <p class="descripcion-cuadro-mobile">130x100cm</p>
+                </div>
+                <div class="cuadro-contenedor-botones">
+                    <label for="abrir-descripcion21" class="abrir-descripcion-label">
+                        <img src="images/down-arrow.svg" alt="Expandir Información" class="boton-down-arrow">
+                        <img src="images/up-arrow.svg" alt="Minimizar Información" class="boton-up-arrow">
+                    </label>
+                    <label for="abrir-cuadro21" class="abrir-cuadro-label">
+                        <img src="images/expand.svg" alt="Expandir" class="boton-expandir">
+                        <img src="images/minimize.svg" alt="Minimizar" class="boton-minimizar">
+                    </label>
+                </div>
+            </div>
+
+            <input id="abrir-cuadro22" type="checkbox" class="abrir-cuadro-input">
+            <input id="abrir-descripcion22" type="checkbox" class="abrir-descripcion-input">
+            <div class="cuadro-contenedor"> 
+                <img class="cuadro-imagen" src="images/cuadros/manifestacion_80x100.jpg" alt="Manifestación"/>
+            <div class="cuadro-contenedor-descripcion">
+                    <h4 class="titulo-cuadro-mobile">Manifestación</h4> 
+                    <p class="descripcion-cuadro-mobile">80x100cm</p>
+                </div>
+                <div class="cuadro-contenedor-botones">
+                    <label for="abrir-descripcion22" class="abrir-descripcion-label">
+                        <img src="images/down-arrow.svg" alt="Expandir Información" class="boton-down-arrow">
+                        <img src="images/up-arrow.svg" alt="Minimizar Información" class="boton-up-arrow">
+                    </label>
+                    <label for="abrir-cuadro22" class="abrir-cuadro-label">
+                        <img src="images/expand.svg" alt="Expandir" class="boton-expandir">
+                        <img src="images/minimize.svg" alt="Minimizar" class="boton-minimizar">
+                    </label>
+                </div>
+            </div>
+
+            <input id="abrir-cuadro23" type="checkbox" class="abrir-cuadro-input">
+            <input id="abrir-descripcion23" type="checkbox" class="abrir-descripcion-input">
+            <div class="cuadro-contenedor"> 
+                <img class="cuadro-imagen" src="images/cuadros/los-banistes_80x100.jpg" alt="Los Bañistes"/>
+            <div class="cuadro-contenedor-descripcion">
+                    <h4 class="titulo-cuadro-mobile">Los Bañistes</h4> 
+                    <p class="descripcion-cuadro-mobile">80x100cm</p>
+                </div>
+                <div class="cuadro-contenedor-botones">
+                    <label for="abrir-descripcion23" class="abrir-descripcion-label">
+                        <img src="images/down-arrow.svg" alt="Expandir Información" class="boton-down-arrow">
+                        <img src="images/up-arrow.svg" alt="Minimizar Información" class="boton-up-arrow">
+                    </label>
+                    <label for="abrir-cuadro23" class="abrir-cuadro-label">
+                        <img src="images/expand.svg" alt="Expandir" class="boton-expandir">
+                        <img src="images/minimize.svg" alt="Minimizar" class="boton-minimizar">
+                    </label>
+                </div>
+            </div>
+
+            <input id="abrir-cuadro24" type="checkbox" class="abrir-cuadro-input">
+            <input id="abrir-descripcion24" type="checkbox" class="abrir-descripcion-input">
+            <div class="cuadro-contenedor"> 
+                <img class="cuadro-imagen" src="images/cuadros/fermin_80x100.jpg" alt="Fermin"/>
+            <div class="cuadro-contenedor-descripcion">
+                    <h4 class="titulo-cuadro-mobile">Fermin</h4> 
+                    <p class="descripcion-cuadro-mobile">80x100cm</p>
+                </div>
+                <div class="cuadro-contenedor-botones">
+                    <label for="abrir-descripcion24" class="abrir-descripcion-label">
+                        <img src="images/down-arrow.svg" alt="Expandir Información" class="boton-down-arrow">
+                        <img src="images/up-arrow.svg" alt="Minimizar Información" class="boton-up-arrow">
+                    </label>
+                    <label for="abrir-cuadro24" class="abrir-cuadro-label">
+                        <img src="images/expand.svg" alt="Expandir" class="boton-expandir">
+                        <img src="images/minimize.svg" alt="Minimizar" class="boton-minimizar">
+                    </label>
+                </div>
+            </div>
+
+            <input id="abrir-cuadro25" type="checkbox" class="abrir-cuadro-input">
+            <input id="abrir-descripcion25" type="checkbox" class="abrir-descripcion-input">
+            <div class="cuadro-contenedor"> 
+                <img class="cuadro-imagen" src="images/cuadros/ana-no-duerme_50x70.jpg" alt="Ana no duerme"/>
+            <div class="cuadro-contenedor-descripcion">
+                    <h4 class="titulo-cuadro-mobile">Ana no duerme</h4> 
+                    <p class="descripcion-cuadro-mobile">50x70cm</p>
+                </div>
+                <div class="cuadro-contenedor-botones">
+                    <label for="abrir-descripcion25" class="abrir-descripcion-label">
+                        <img src="images/down-arrow.svg" alt="Expandir Información" class="boton-down-arrow">
+                        <img src="images/up-arrow.svg" alt="Minimizar Información" class="boton-up-arrow">
+                    </label>
+                    <label for="abrir-cuadro25" class="abrir-cuadro-label">
+                        <img src="images/expand.svg" alt="Expandir" class="boton-expandir">
+                        <img src="images/minimize.svg" alt="Minimizar" class="boton-minimizar">
+                    </label>
+                </div>
+            </div>
+
+            <input id="abrir-cuadro26" type="checkbox" class="abrir-cuadro-input">
+            <input id="abrir-descripcion26" type="checkbox" class="abrir-descripcion-input">
+            <div class="cuadro-contenedor"> 
+                <img class="cuadro-imagen" src="images/cuadros/el-chapuzon_50x70.jpg" alt="El chapuzón"/>
+            <div class="cuadro-contenedor-descripcion">
+                    <h4 class="titulo-cuadro-mobile">El chapuzón</h4> 
+                    <p class="descripcion-cuadro-mobile">50x70cm</p>
+                </div>
+                <div class="cuadro-contenedor-botones">
+                    <label for="abrir-descripcion26" class="abrir-descripcion-label">
+                        <img src="images/down-arrow.svg" alt="Expandir Información" class="boton-down-arrow">
+                        <img src="images/up-arrow.svg" alt="Minimizar Información" class="boton-up-arrow">
+                    </label>
+                    <label for="abrir-cuadro26" class="abrir-cuadro-label">
+                        <img src="images/expand.svg" alt="Expandir" class="boton-expandir">
+                        <img src="images/minimize.svg" alt="Minimizar" class="boton-minimizar">
+                    </label>
+                </div>
+            </div>
+
+            <input id="abrir-cuadro27" type="checkbox" class="abrir-cuadro-input">
+            <input id="abrir-descripcion27" type="checkbox" class="abrir-descripcion-input">
+            <div class="cuadro-contenedor"> 
+                <img class="cuadro-imagen" src="images/cuadros/habitacion-compartida_100x100.jpg" alt="Habitación compartida"/>
+            <div class="cuadro-contenedor-descripcion">
+                    <h4 class="titulo-cuadro-mobile">Habitación compartida</h4> 
+                    <p class="descripcion-cuadro-mobile">100x100cm</p>
+                </div>
+                <div class="cuadro-contenedor-botones">
+                    <label for="abrir-descripcion27" class="abrir-descripcion-label">
+                        <img src="images/down-arrow.svg" alt="Expandir Información" class="boton-down-arrow">
+                        <img src="images/up-arrow.svg" alt="Minimizar Información" class="boton-up-arrow">
+                    </label>
+                    <label for="abrir-cuadro27" class="abrir-cuadro-label">
+                        <img src="images/expand.svg" alt="Expandir" class="boton-expandir">
+                        <img src="images/minimize.svg" alt="Minimizar" class="boton-minimizar">
+                    </label>
+                </div>
+            </div>
+
+            <input id="abrir-cuadro28" type="checkbox" class="abrir-cuadro-input">
+            <input id="abrir-descripcion28" type="checkbox" class="abrir-descripcion-input">
+            <div class="cuadro-contenedor"> 
+                <img class="cuadro-imagen" src="images/cuadros/la-metropolis_130x100.jpg" alt="La metrópolis"/>
+            <div class="cuadro-contenedor-descripcion">
+                    <h4 class="titulo-cuadro-mobile">La metrópolis</h4> 
+                    <p class="descripcion-cuadro-mobile">130x100cm</p>
+                </div>
+                <div class="cuadro-contenedor-botones">
+                    <label for="abrir-descripcion28" class="abrir-descripcion-label">
+                        <img src="images/down-arrow.svg" alt="Expandir Información" class="boton-down-arrow">
+                        <img src="images/up-arrow.svg" alt="Minimizar Información" class="boton-up-arrow">
+                    </label>
+                    <label for="abrir-cuadro28" class="abrir-cuadro-label">
+                        <img src="images/expand.svg" alt="Expandir" class="boton-expandir">
+                        <img src="images/minimize.svg" alt="Minimizar" class="boton-minimizar">
+                    </label>
+                </div>
+            </div>
+        
+            <input id="abrir-cuadro29" type="checkbox" class="abrir-cuadro-input">
+            <input id="abrir-descripcion29" type="checkbox" class="abrir-descripcion-input">
+            <div class="cuadro-contenedor"> 
+                <img class="cuadro-imagen" src="images/cuadros/noche-de-caos-en-el-estudio_100x100.jpg" alt="Noche de caos en el estudio"/>
+            <div class="cuadro-contenedor-descripcion">
+                    <h4 class="titulo-cuadro-mobile" style="font-size: 1.1em">Noche de caos en el estudio</h4> 
+                    <p class="descripcion-cuadro-mobile">100x100cm</p>
+                </div>
+                <div class="cuadro-contenedor-botones">
+                    <label for="abrir-descripcion29" class="abrir-descripcion-label">
+                        <img src="images/down-arrow.svg" alt="Expandir Información" class="boton-down-arrow">
+                        <img src="images/up-arrow.svg" alt="Minimizar Información" class="boton-up-arrow">
+                    </label>
+                    <label for="abrir-cuadro29" class="abrir-cuadro-label">
+                        <img src="images/expand.svg" alt="Expandir" class="boton-expandir">
+                        <img src="images/minimize.svg" alt="Minimizar" class="boton-minimizar">
+                    </label>
+                </div>
+            </div>
+
+            <input id="abrir-cuadro30" type="checkbox" class="abrir-cuadro-input">
+            <input id="abrir-descripcion30" type="checkbox" class="abrir-descripcion-input">
+            <div class="cuadro-contenedor"> 
+                <img class="cuadro-imagen" src="images/cuadros/norte_50x70.jpg" alt="Norte"/>
+            <div class="cuadro-contenedor-descripcion">
+                    <h4 class="titulo-cuadro-mobile">Norte</h4> 
+                    <p class="descripcion-cuadro-mobile">50x70cm</p>
+                </div>
+                <div class="cuadro-contenedor-botones">
+                    <label for="abrir-descripcion30" class="abrir-descripcion-label">
+                        <img src="images/down-arrow.svg" alt="Expandir Información" class="boton-down-arrow">
+                        <img src="images/up-arrow.svg" alt="Minimizar Información" class="boton-up-arrow">
+                    </label>
+                    <label for="abrir-cuadro30" class="abrir-cuadro-label">
+                        <img src="images/expand.svg" alt="Expandir" class="boton-expandir">
+                        <img src="images/minimize.svg" alt="Minimizar" class="boton-minimizar">
+                    </label>
+                </div>
+            </div>
+
+            <input id="abrir-cuadro31" type="checkbox" class="abrir-cuadro-input">
+            <input id="abrir-descripcion31" type="checkbox" class="abrir-descripcion-input">
+            <div class="cuadro-contenedor"> 
+                <img class="cuadro-imagen" src="images/cuadros/puerto_50x70.jpg" alt="Puerto"/>
+            <div class="cuadro-contenedor-descripcion">
+                    <h4 class="titulo-cuadro-mobile">Puerto</h4> 
+                    <p class="descripcion-cuadro-mobile">50x70cm</p>
+                </div>
+                <div class="cuadro-contenedor-botones">
+                    <label for="abrir-descripcion31" class="abrir-descripcion-label">
+                        <img src="images/down-arrow.svg" alt="Expandir Información" class="boton-down-arrow">
+                        <img src="images/up-arrow.svg" alt="Minimizar Información" class="boton-up-arrow">
+                    </label>
+                    <label for="abrir-cuadro31" class="abrir-cuadro-label">
+                        <img src="images/expand.svg" alt="Expandir" class="boton-expandir">
+                        <img src="images/minimize.svg" alt="Minimizar" class="boton-minimizar">
+                    </label>
+                </div>
+            </div>
+
         </div>
     </section>
     <!-- fin obras mobile -->
@@ -666,10 +1011,6 @@
         <p class="datos-web">Pagina web creada por&nbsp;<a href="https://api.whatsapp.com/send?phone=5491150258243">Federico Kolonski</a></p>
     </footer>
     <!-- fin contacto -->
-
-    <!-- boton subir -->
-    <!-- <a href="#up"><img src="images/boton-up.svg" alt="" class="boton-up"></a> -->
-    <!-- fin boton subir -->
 
 </body>
 </html>
