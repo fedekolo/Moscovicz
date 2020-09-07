@@ -557,7 +557,7 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
         height: auto;
         position: fixed;
         top: 0;
-        border-bottom: 2px solid black;
+        box-shadow: 0 0 7px 0 rgba(71, 71, 71, 0.548);
         z-index: 1;
         background-color: white;
     }
@@ -566,6 +566,13 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
         width: 45px;
         height: 45px;
         margin: 5px auto 0px 20px;
+    }
+
+    .menu-icono-close {
+        display: none;
+        width: 38px;
+        height: 38px;
+        margin: 5px auto 0px 23px;
     }
 
     .menu-mobile-label {
@@ -605,6 +612,14 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
         height: 115px;
     }
 
+    .menu-mobile-input:checked ~ .menu-mobile-label img.menu-icono {
+        display: none;
+    }
+
+    .menu-mobile-input:checked ~ .menu-mobile-label img.menu-icono-close {
+        display: block;
+    }
+
     .slider {
         display: none;
     }
@@ -636,66 +651,137 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
         margin: auto 0;
     }
 
-    .abrir-cuadro-input:checked ~ .cuadro-contenedor:hover {
-        transition: 1s;
-        margin: 20px auto;
-        box-sizing: border-box;
-        background-color: rgba(218, 216, 216, 0.445);
-        border-radius: 5px;    
-        border: 5px solid rgba(107, 107, 107, 0.111);
-        border-top: none;
-        padding-top: 3px;
-    }
+    /* botones obras */
 
-    .abrir-cuadro-input:checked ~ .cuadro-contenedor:hover img {
-        opacity: 1;
-        transition: 1s;
-        transform: scale(1.07);
-        border: none;
-        margin: 20px auto;
-    }
+        .cuadro-contenedor-botones {
+            display: flex;
+            justify-content: center;
+            width: 50%;
+            height: auto;
+            margin: auto;
+            margin-bottom: 1em;
+            padding: 4px 0 2px 0;
+            border-top: 2px solid black;
+            border-bottom: 2px solid black;
+        }
 
-    .titulo-cuadro-mobile {
-        display: none; 
-        transition: 2s;
-    }
+        .boton-expandir {
+            height: 40px;
+            width: 40px;
+            transition: all 1s ease;
+            margin-left: 20px;
+            
+            /* espejado en x */
+            -moz-transform: scaleX(-1);
+            -o-transform: scaleX(-1);
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+            -ms-filter: "FlipH";
+            filter: FlipH;
+        }
 
-    .descripcion-cuadro-mobile {
-        display: none; 
-        transition: 2s;
-    }
+        .boton-minimizar {
+            display: none;
+            height: 40px;
+            width: 40px;
+            transition: all 1s ease;
+            margin-left: 20px;
 
-    .abrir-cuadro-input {
-        display: none;
-    }
+            /* espejado en x */
+            -moz-transform: scaleX(-1);
+            -o-transform: scaleX(-1);
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+            -ms-filter: "FlipH";
+            filter: FlipH;
+        }
 
-    .abrir-cuadro-input:checked ~ .cuadro-contenedor:hover label {
-        display: block;
-        transition: 2s;
-        z-index: 1;
-    }
+        .abrir-cuadro-input:checked ~ .cuadro-contenedor:hover {
+            transition: 1s;
+            margin: 20px auto;
+            box-sizing: border-box;
+            padding-top: 3px;
+        }
 
-    .abrir-cuadro-input:checked ~ .cuadro-contenedor:hover h4 {
-        display: block;
-        transition: 2s;
-        text-align: center;
-        color: rgb(27, 26, 26);
-        font-size: 23px;
-        margin: 2px auto;
-        position: relative;
-        top: 5px;
-    }
+        .abrir-cuadro-input:checked ~ .cuadro-contenedor:hover img.cuadro-imagen {
+            opacity: 1;
+            transition: 1s;
+            transform: scale(1.06);
+            border: none;
+        }
 
-    .abrir-cuadro-input:checked ~ .cuadro-contenedor:hover p {
-        display: block;
-        transition: 2s;
-        text-align: center;
-        color: rgb(27, 26, 26);
-        font-size: 20px;
-        margin: 0em;
-        position: relative;
-        bottom: 5px;
-    }
+        .abrir-cuadro-input:checked ~ .cuadro-contenedor:hover img.boton-expandir {
+            display: none;
+        }
+
+        .abrir-cuadro-input:checked ~ .cuadro-contenedor:hover img.boton-minimizar {
+            display: block;
+        }
+
+        .abrir-cuadro-input:checked ~ .cuadro-contenedor:hover div.cuadro-contenedor-botones {
+            margin-top: 0.7em;
+        }
+
+        .abrir-cuadro-input:checked ~ .cuadro-contenedor:hover div.cuadro-contenedor-descripcion {
+            margin-top: 0.7em;
+        }
+
+        .boton-down-arrow {
+            height: 40px;
+            width: 40px;
+        }
+
+        .boton-up-arrow {
+            display: none;
+            height: 40px;
+            width: 40px;
+        }
+
+        .abrir-descripcion-input:checked ~ .cuadro-contenedor div.cuadro-contenedor-descripcion {
+            height: 5em;
+        }
+
+        .abrir-descripcion-input:checked ~ .cuadro-contenedor img.boton-down-arrow {
+            display: none;
+        }
+
+        .abrir-descripcion-input:checked ~ .cuadro-contenedor img.boton-up-arrow {
+            display: block;
+        }
+
+        .cuadro-contenedor-descripcion {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            line-height: 0;
+            overflow: hidden;
+            height: 0;
+            width: 100%;
+            padding: 0px auto;
+            text-align: center;
+            transition: all 2s ease;
+        }
+
+        .titulo-cuadro-mobile {
+            color: rgb(27, 26, 26);
+            font-size: 23px;
+            margin: 0.8em auto;
+        }
+
+        .descripcion-cuadro-mobile {
+            color: rgb(27, 26, 26);
+            font-size: 20px;
+        }
+
+        .abrir-cuadro-input {
+            display: none;
+        }
+
+        .abrir-descripcion-input {
+            display: none;
+        }
+
+    /* fin botones obras */
 
     .cuadro-contenedor {
         width: 100%;
@@ -704,6 +790,12 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
 
     .cuadro-contenedor:hover {
         height: auto;
+    }
+
+    .cuadro-contenedor:hover > .cuadro-imagen {
+        opacity: 1;
+        transform: scale(1);
+        margin: 5px auto;
     }
 
     .cuadro-imagen {
