@@ -112,11 +112,11 @@ nav {
 }
 
 @keyframes slider-right {
-    0% {position: relative; left: 1500px;}
-    100% {position: relative; left: 0;}
+    0% {position: relative; left: 1500px; margin-bottom: 1000px;}
+    100% {position: relative; left: 0; margin-bottom: 10px}
 }
 
-#obras, #obras-mobile {
+#obras-mobile {
     transform: translate(y);
     animation: obras-up 2s ease;
 }
