@@ -87,7 +87,8 @@ header {
 
 /* inicio efecto de entrada */
 header {
-    transform: translate(y);
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
     animation: header-down 2s ease;
 }
 
@@ -96,8 +97,9 @@ header {
     100% {position: relative; bottom: 0;}
 }
 
-nav {
-    transform: translate(x);
+.menu {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
     animation: nav-left 2s ease;
 }
 
@@ -106,8 +108,20 @@ nav {
     100% {position: relative; right: 0;}
 }
 
+.menu-mobile-background {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    animation: nav-mobile-left 2s ease;
+}
+
+@keyframes nav-mobile-left {
+    0% {position: fixed; right: 1500px; top: 0;}
+    100% {position: fixed; right: 0; top: 0;}
+}
+
 .slider {
-    transform: translate(x);
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
     animation: slider-right 2s ease;
 }
 
@@ -117,7 +131,8 @@ nav {
 }
 
 #obras-mobile {
-    transform: translate(y);
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
     animation: obras-up 2s ease;
 }
 
