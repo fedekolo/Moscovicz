@@ -7,20 +7,7 @@
     <link href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
     <link href="styles/index.css" rel="stylesheet">
-    
-    <!-- popup -->
-    <script> 
-        var altura=600;
-        var anchura=800;
-        
-        var y=parseInt((window.screen.height/2)-(altura/2));
-        var x=parseInt((window.screen.width/2)-(anchura/2));
-
-        function ventanaSecundaria (URL){ 
-           window.open(URL,"ventana1",'width='+anchura+',height='+altura+',top='+y+',left='+x+',toolbar=no,location=no,status=no,menubar=no,scrollbars=no,directories=no,resizable=no') 
-        } 
-    </script>
-    
+       
     <!-- loader -->
     <script>
         // var Loading = (loadingDelayHidden = 0) => {
@@ -63,16 +50,6 @@
         //     return{'init':init}
         // }
         // Loading(1000).init();
-
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 160) {
-                if (!document.querySelector('.logoMenu').classList.contains('show')){
-                    document.querySelector('.logoMenu').classList.add('show');
-                }
-            } else {
-                document.querySelector('.logoMenu').classList.remove('show');
-            }
-        });
     </script>
 
 </head>
@@ -152,25 +129,45 @@
 
     <!-- obras desktop -->
     <section class="background-obras" id="obras">
+        
+        <!-- popup modal -->
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+        </div>
+        
         <div class="obras">
-            <a class="obras-popup" href="javascript:ventanaSecundaria('popups-obras/ubicacion-desconocida_190x150.html')">
+            <div class="cuadro-contenedor"> 
+                <img class="cuadro-imagen" src="images/cuadros/ubicacion-desconocida_190x150.jpg" alt="Ubicación desconocida <br> 190x150cm"/>
+                <h4 class="cuadro-texto">Ubicación<br>desconocida</h4>            
+            </div>
+            <!-- <a class="obras-popup" href="javascript:ventanaSecundaria('popups-obras/ubicacion-desconocida_190x150.html')">
                 <div class="cuadro-contenedor"> 
                     <img class="cuadro-imagen" src="images/cuadros/ubicacion-desconocida_190x150.jpg" alt="Ubicación desconocida"/>
                     <h4 class="cuadro-texto">Ubicación<br>desconocida</h4>            
                 </div>
-            </a>
-            <a class="obras-popup" href="javascript:ventanaSecundaria('popups-obras/dia-53-la-inundacion_70x50.html')">
+            </a> -->
+
+            <a class="obras-popup" href="javascript:ventanaSecundaria('popups-obras/dia-53-la-inundacion_70x50.html')"></a>
                 <div class="cuadro-contenedor"> 
                     <img class="cuadro-imagen" src="images/cuadros/dia-53-la-inundacion_70x50.jpg" alt="Dia 53: La inundación"/>
                     <h4 class="cuadro-texto">Dia 53:<br>La inundación</h4>            
                 </div>
             </a>
-            <a class="obras-popup" href="javascript:ventanaSecundaria('popups-obras/candida-erendira-1_150x100.html')">
+
+            <!-- <a class="obras-popup" href="javascript:ventanaSecundaria('popups-obras/candida-erendira-1_150x100.html')">
                 <div class="cuadro-contenedor"> 
                     <img class="cuadro-imagen" src="images/cuadros/candida-erendira-2_150x100.jpg" alt="Candida erendiza 1"/>
                     <h4 class="cuadro-texto">Candida erendiza 1</h4>            
                 </div>
-            </a> 
+            </a>  -->
+            
+            <div class="cuadro-contenedor"> 
+                <img class="cuadro-imagen" src="images/cuadros/candida-erendira-2_150x100.jpg" alt="Candida erendiza 2 <br> 150x100cm"/>
+                <h4 class="cuadro-texto">Candida erendiza 2</h4>            
+            </div>
+
             <a class="obras-popup" href="javascript:ventanaSecundaria('popups-obras/dia-38_80x100.html')">
                 <div class="cuadro-contenedor"> 
                     <img class="cuadro-imagen" src="images/cuadros/dia-38_80x100.jpg" alt="Dia 38"/>
@@ -1011,6 +1008,9 @@
         <p class="datos-web">Pagina web creada por&nbsp;<a href="https://api.whatsapp.com/send?phone=5491150258243">Federico Kolonski</a></p>
     </footer>
     <!-- fin contacto -->
+
+<!-- script js -->
+<script src="js/script.js"></script>
 
 </body>
 </html>
